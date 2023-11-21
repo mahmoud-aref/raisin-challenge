@@ -28,7 +28,7 @@ public class FixtureServiceImpl implements FixtureService {
 
 
     @Async
-    @Scheduled(fixedRate = 100)
+    @Scheduled(fixedRate = 20)
     @Override
     public void getFromSourceA() {
         if (!isADone) {
@@ -45,7 +45,7 @@ public class FixtureServiceImpl implements FixtureService {
     }
 
     @Async
-    @Scheduled(fixedRate = 100)
+    @Scheduled(fixedRate = 20)
     @Override
     public void getFromSourceB() {
         if (!isBDone) {
