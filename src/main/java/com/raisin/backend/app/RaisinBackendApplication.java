@@ -1,4 +1,4 @@
-package com.raisin.backend;
+package com.raisin.backend.app;
 
 import com.raisin.backend.infrastructure.http.client.FixtureClient;
 import org.springframework.boot.SpringApplication;
