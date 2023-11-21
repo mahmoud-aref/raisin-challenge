@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: raisin-backend
+
+internal-api:
+  fixture-api-base-url: http://localhost:7299
+
+logging:
+  level:
+    root: INFO # for less verbose logging
+    feign: INFO
