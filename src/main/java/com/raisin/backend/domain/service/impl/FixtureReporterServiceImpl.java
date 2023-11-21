@@ -35,9 +35,9 @@ public class FixtureReporterServiceImpl implements FixtureReporterService {
                 .forEach(this::reportFixture);
     }
 
-    @Async
+
     @Override
-    public void reportAllOrphaned() {
+    public synchronized void reportAllOrphaned() {
         fixtureRepository
                 .findAll()
                 .forEach(fixtureObject -> {
