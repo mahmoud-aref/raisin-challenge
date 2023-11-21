@@ -12,9 +12,9 @@ public class ThreadPoolExecutorConfigs {
         // those fields could be configurable through application.yml
         // but, I will leave it as it is for now
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(20);
-        executor.setMaxPoolSize(100);
-        executor.setQueueCapacity(200);
+        executor.setCorePoolSize(30);
+        executor.setMaxPoolSize(50);
+        executor.setQueueCapacity(100);
         executor.initialize();
         return executor;
     }

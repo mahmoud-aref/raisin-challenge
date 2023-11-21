@@ -73,7 +73,7 @@ public class FixtureServiceImpl implements FixtureService {
         }
     }
 
-    private void addFixture(FixtureObject fixtureObject) {
+    private synchronized void addFixture(FixtureObject fixtureObject) {
         if (fixtureRepository.existsOnList(fixtureObject.getId())) {
             // send it as joined
             fixtureReporterService.reportJoinedFixture(fixtureObject);
