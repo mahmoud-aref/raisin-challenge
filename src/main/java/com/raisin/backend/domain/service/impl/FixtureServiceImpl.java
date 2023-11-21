@@ -8,6 +8,7 @@ import com.raisin.backend.infrastructure.datasource.FixtureRepository;
 import com.raisin.backend.infrastructure.http.client.FixtureClient;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,7 @@ public class FixtureServiceImpl implements FixtureService {
     private final FixtureReporterService fixtureReporterService;
 
 
+    @Async
     @Scheduled(fixedRate = 100)
     @Override
     public void getFromSourceA() {
@@ -42,7 +44,7 @@ public class FixtureServiceImpl implements FixtureService {
         }
     }
 
-
+    @Async
     @Scheduled(fixedRate = 100)
     @Override
     public void getFromSourceB() {

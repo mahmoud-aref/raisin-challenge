@@ -53,7 +53,6 @@ public class FixtureReporterServiceImpl implements FixtureReporterService {
             return;
         }
         var httpResponse = fixtureClient.reportFixture(fixtureObject);
-        System.out.println(fixtureObject);
         httpResponse.ifPresentOrElse(response -> {
             if ("ok".equalsIgnoreCase(response.getStatus()) ||
                     "success".equalsIgnoreCase(response.getStatus())) {
