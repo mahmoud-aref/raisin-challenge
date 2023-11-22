@@ -60,6 +60,7 @@ public class FixtureReporterServiceImpl implements FixtureReporterService {
                 fixtureRepository.addToReported(fixtureObject);
                 deleteFromRetryIfExists(fixtureObject);
             } else if ("fail".equals(response.getStatus())) {
+                log.info("Fixture report returns fail status: {}", response);
                 addToRetryIfNotExist(fixtureObject);
             } else {
                 log.debug("Fixture report returns unknown status: {}", response);
